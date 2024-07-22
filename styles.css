@@ -139,10 +139,12 @@ button {
   ::-webkit-scrollbar {
     display: none;
   }
+
   .content {
     touch-action: none;
   }
   .content__button {
     touch-action: none;
+    -webkit-tap-highlight-color: transparent;
   }
 }
