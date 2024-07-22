@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", "Roboto", sans-serif;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+
+  background-color: rgb(25, 25, 134);
+}
+
+.header {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* .content {
+} */
+
+.content__score {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-svg {
+  width: 50px;
+  height: 50px;
+}
+
+.score {
+  font-size: 18px;
+}
+
+.content__button {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.clicker-button {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  border: 8px solid white;
+  margin-bottom: 12em;
+  transition: transform 0.2s ease;
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  transform: rotateX(var(--tiltX)) rotateY(var(--tiltY));
+  background-color: transparent;
+  user-select: none;
+}
+
+.clicker-button:active {
+  border-color: red;
+}
+
+.clicker-svg {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+  user-select: none;
+}
+
+.plus-one {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  animation: move-up 2s forwards;
+}
+
+.heart-crack {
+  width: 30px;
+  height: 30px;
+}
+
+.footer {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.clear-button {
+  margin-bottom: 20px;
+  padding: 4px 10px;
+  font-size: 20px;
+  border: 4px solid white;
+  border-radius: 10px;
+  background-color: transparent;
+  user-select: none;
+}
+
+.clear-button:active {
+  border-color: red;
+}
+
+@keyframes move-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+@media (max-width: 414px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .content {
+    touch-action: none;
+  }
+  .content__button {
+    touch-action: none;
+  }
+}
