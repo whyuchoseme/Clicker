@@ -1,16 +1,17 @@
 import {
-  getStorageItem,
-  checkStatus,
   getRotate,
   plusOne,
   setStorageItem,
+  checkStatus,
+  getStorageItem,
 } from "./utils.js";
 
-const scoreImg = document.querySelector(".score-svg");
-const score = document.querySelector(".score");
-const clickerButton = document.querySelector(".clicker-button");
-const clickerImg = document.querySelector(".clicker-svg");
-const clearButton = document.querySelector(".clear-button");
+const clickerButton = document.querySelector(".clicker__clicker-button");
+const score = document.querySelector(".score__score-count");
+const clickerImg = document.querySelector(".clicker__clicker-svg");
+const clearButton = document.querySelector(".footer__clear-button");
+const scoreImg = document.querySelector(".score__score-svg");
+
 let count = 0;
 
 clickerButton.addEventListener("click", (event) => {
@@ -40,7 +41,7 @@ function startApp() {
 }
 
 function checkScore(count) {
-  if (count >= 500) {
+  if (count >= 1000) {
     scoreImg.setAttribute("src", "img/heart.svg");
   }
 }

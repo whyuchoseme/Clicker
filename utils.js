@@ -25,7 +25,7 @@ export const getRotate = (e, parentElement) => {
 
 export const plusOne = (e, parentElement, score) => {
   const plusOne = document.createElement("div");
-  plusOne.classList.add("plus-one");
+  plusOne.classList.add("clicker__plus-one");
   plusOne.style.top = e.offsetY - 50 + "px";
   plusOne.style.left = e.offsetX + "px";
   plusOne.innerHTML = checkCount(score);
@@ -38,28 +38,37 @@ export const plusOne = (e, parentElement, score) => {
 
 export const checkStatus = (pointer, element) => {
   if (pointer >= 0) {
-    element.setAttribute("src", "img/queen.png");
+    element.setAttribute("src", "img/first.png");
   }
-  if (pointer >= 20) {
-    element.setAttribute("src", "img/king.png");
+  if (pointer >= 50) {
+    element.setAttribute("src", "img/second.png");
+  }
+  if (pointer >= 100) {
+    element.setAttribute("src", "img/third.png");
   }
   if (pointer >= 500) {
-    element.setAttribute("src", "img/love.png");
+    element.setAttribute("src", "img/fourth.png");
+  }
+  if (pointer >= 1000) {
+    element.setAttribute("src", "img/last.png");
+  }
+  if (pointer >= 1010) {
+    element.setAttribute("src", "img/simba.png");
   }
 };
 
 export const checkCount = (score) => {
-  if (score >= 500) {
+  if (score >= 1000) {
     return `+1<img
-      class="heart-crack"
+      class="clicker__plus-one-svg"
       src="img/heart.svg"
-      alt="broke love"
+      alt="Real Love"
     />`;
   } else {
     return `+1<img
-  class="heart-crack"
+  class="clicker__plus-one-svg"
   src="img/heart-crack.svg"
-  alt="broke love"
+  alt="Broke Love"
   />`;
   }
 };

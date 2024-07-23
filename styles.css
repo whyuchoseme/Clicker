@@ -13,9 +13,7 @@ button {
 
 .wrapper {
   width: 100%;
-  height: 100%;
   height: 100vh;
-
   background-color: rgb(25, 25, 134);
 }
 
@@ -31,7 +29,9 @@ button {
 /* .content {
 } */
 
-.content__score {
+.content__score 
+/* score */
+{
   width: 100%;
   height: 20vh;
   display: flex;
@@ -40,16 +40,19 @@ button {
   align-items: center;
 }
 
-.score-svg {
+.score__score-svg {
   width: 50px;
   height: 50px;
+  user-select: none;
+  pointer-events: none;
 }
 
-.score {
+.score__score-count {
   font-size: 18px;
 }
 
-.content__button {
+.content__clicker 
+/* clicker */ {
   width: 100%;
   height: 70vh;
   display: flex;
@@ -59,7 +62,7 @@ button {
   user-select: none;
 }
 
-.clicker-button {
+.clicker__clicker-button {
   position: relative;
   width: 200px;
   height: 200px;
@@ -74,19 +77,20 @@ button {
   user-select: none;
 }
 
-.clicker-button:active {
+.clicker__clicker-button:active {
   border-color: red;
 }
 
-.clicker-svg {
+.clicker__clicker-svg {
   width: 100%;
   height: 100%;
   border: none;
   border-radius: inherit;
   user-select: none;
+  pointer-events: none;
 }
 
-.plus-one {
+.clicker__plus-one {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -96,7 +100,7 @@ button {
   animation: move-up 2s forwards;
 }
 
-.heart-crack {
+.clicker__plus-one-svg {
   width: 30px;
   height: 30px;
 }
@@ -110,7 +114,7 @@ button {
   align-items: flex-end;
 }
 
-.clear-button {
+.footer__clear-button {
   margin-bottom: 20px;
   padding: 4px 10px;
   font-size: 20px;
@@ -120,7 +124,7 @@ button {
   user-select: none;
 }
 
-.clear-button:active {
+.footer__clear-button:active {
   border-color: red;
 }
 
@@ -136,14 +140,11 @@ button {
 }
 
 @media (max-width: 414px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
-
-  .content {
+  /* .content {
     touch-action: none;
-  }
-  .content__button {
+  } */
+
+  .content__clicker {
     touch-action: none;
     -webkit-tap-highlight-color: transparent;
   }
